@@ -96,7 +96,7 @@ const faqs = [
 ];
 
 function Arrow() {
-  return <span aria-hidden="true">↗</span>;
+  return <span className="arrow-glyph" aria-hidden="true">↗︎</span>;
 }
 
 function ChunkedVideo({
@@ -159,7 +159,6 @@ function ChunkedVideo({
         controls={!background && Boolean(source)}
         playsInline
         preload="none"
-        poster="/images/encerramento.jpg"
         aria-hidden={background ? "true" : undefined}
         aria-label={background ? undefined : "Vídeo institucional do Curso de Maturidade no Espírito"}
       >
@@ -299,12 +298,18 @@ export default function Home() {
           <div className="hero-grid">
             <div className="hero-copy">
               <p className="eyebrow">Curso de Maturidade no Espírito</p>
-              <h1>Conheça a Palavra.<br /><em>Desenvolva sua</em><br /><em>vida</em> no Espírito.</h1>
+              <h1>
+                Conheça a Palavra.<br />
+                <em>Desenvolva <span className="desktop-inline">sua</span></em><br />
+                <em><span className="mobile-inline">sua </span>vida</em>
+                <span className="desktop-inline"> no Espírito.</span>
+                <span className="mobile-line"><br />no Espírito.</span>
+              </h1>
               <p className="hero-lead">
                 Um caminho de conhecimento, transformação e crescimento que torna princípios e valores bíblicos acessíveis à vida cotidiana.
               </p>
               <div className="button-row">
-                <a className="button button-light" href="#sobre">Conheça o curso <span>↓</span></a>
+                <a className="button button-light" href="#sobre">Conheça o curso <span className="arrow-glyph">↓︎</span></a>
                 <a className="text-link" href={studentArea} target="_blank" rel="noreferrer">
                   Acessar área do aluno <Arrow />
                 </a>
@@ -373,7 +378,7 @@ export default function Home() {
               <li key={subject}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{subject}</h3>
-                <b aria-hidden="true">↗</b>
+                <b aria-hidden="true"><Arrow /></b>
               </li>
             ))}
           </ol>
@@ -428,7 +433,7 @@ export default function Home() {
           <div className="section-label" data-reveal><span>05</span> Perguntas frequentes</div>
           <div className="faq-grid">
             <div>
-              <h2 data-reveal>Tudo o que você<br /><em>precisa saber.</em></h2>
+              <h2 data-reveal><span className="faq-title-line">Tudo o que você</span><br /><em>precisa saber.</em></h2>
               <p data-reveal>Informações da turma atual podem ser atualizadas pela coordenação.</p>
             </div>
             <div className="accordion" data-reveal>

@@ -27,6 +27,11 @@ body {
 a { color: inherit; text-decoration: none; }
 button, summary { font: inherit; }
 img { max-width: 100%; display: block; }
+.arrow-glyph {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal; font-weight: 400; font-variant-emoji: text;
+}
+.mobile-inline, .mobile-line { display: none; }
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
@@ -231,6 +236,7 @@ em { font-weight: 400; color: var(--mint); }
 .faq-grid { max-width: 1450px; margin: auto; display: grid; grid-template-columns: .75fr 1.25fr; gap: 8vw; align-items: start; }
 .faq-grid > div:first-child { position: sticky; top: 115px; }
 .faq-grid > div:first-child > p { max-width: 380px; color: rgba(16,37,28,.62); line-height: 1.6; }
+.faq-title-line { white-space: nowrap; }
 .accordion { display: grid; gap: .65rem; }
 .faq-item { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #fff; }
 .faq-question {
@@ -301,7 +307,10 @@ footer { background: #061d15; color: white; padding: clamp(4rem, 7vw, 7rem) clam
 @media (max-width: 620px) {
   .brand span { display: none; }
   .hero-grid { padding-bottom: 5rem; }
-  .hero h1 { font-size: clamp(3.25rem, 15vw, 5.3rem); }
+  .hero h1 { font-size: clamp(3.1rem, 14vw, 5.1rem); }
+  .desktop-inline { display: none; }
+  .mobile-inline { display: inline; }
+  .mobile-line { display: inline; }
   .hero-lead { font-size: .95rem; }
   .button-row { align-items: stretch; flex-direction: column; gap: 1.25rem; }
   .button { width: 100%; }
@@ -309,12 +318,13 @@ footer { background: #061d15; color: white; padding: clamp(4rem, 7vw, 7rem) clam
   .scroll-note { display: none; }
   .section-pad { padding-top: 5rem; padding-bottom: 5rem; }
   .section-label { margin-bottom: 3.5rem; }
-  .intro h2, .subjects h2, .how h2, .requirements h2, .platform h2, .faq h2 { font-size: clamp(3rem, 13vw, 4.3rem); }
+  .intro h2, .subjects h2, .how h2, .requirements h2, .platform h2 { font-size: clamp(3rem, 13vw, 4.3rem); }
+  .faq h2 { font-size: clamp(2.75rem, 11.5vw, 4rem); }
   .video-heading h2 { font-size: clamp(3rem, 13vw, 4.3rem); }
   .editorial-photo img { height: 420px; }
   .keywords { grid-template-columns: repeat(2, 1fr); }
   .subject-grid { grid-template-columns: 1fr; }
-  .subject-grid li:nth-child(n) { border-right: 0; padding: 1.2rem .6rem; min-height: 110px; grid-template-columns: 40px 1fr auto; }
+  .subject-grid li:nth-child(n) { border-right: 1px solid var(--line); padding: 1.2rem .9rem; min-height: 110px; grid-template-columns: 40px 1fr auto; }
   .subject-grid li:nth-child(n):hover { padding-left: 1rem; }
   .steps { grid-template-columns: 1fr; }
   .steps article:nth-child(n) { min-height: 230px; }
