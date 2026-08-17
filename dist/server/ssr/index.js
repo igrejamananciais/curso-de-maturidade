@@ -11629,7 +11629,7 @@ function createFromReadableStream(stream, options = {}) {
 //#region \0virtual:vite-rsc/client-references
 var client_references_default = {
 	"6efdf509a785": async () => {
-		const m = await import("./assets/page-UYDFlf9n.js");
+		const m = await import("./assets/page-DzLFf6Nw.js");
 		return { get "default"() {
 			return m["default"];
 		} };

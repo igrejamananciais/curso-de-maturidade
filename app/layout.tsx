@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cursodematuridade.com.br"),
   title: "Curso de Maturidade no Espírito | Igreja Mananciais",
   description:
     "Conheça o Curso de Maturidade no Espírito da Igreja Mananciais e desenvolva sua compreensão da Palavra, sua vida cristã e sua caminhada no Espírito.",
   alternates: {
-    canonical: "https://www.igrejamananciais.com.br/cursodematuridade",
+    canonical: "/",
   },
   openGraph: {
     title: "Curso de Maturidade no Espírito | Igreja Mananciais",
